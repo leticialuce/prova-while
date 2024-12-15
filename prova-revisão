@@ -1,0 +1,24 @@
+
+usuario_correto = "admin"
+senha_correta = "1234"
+
+
+tentativas_restantes = 3
+
+
+while tentativas_restantes > 0:
+    usuario = input("Digite o nome de usuário: ")
+    senha = input("Digite a senha: ")
+    
+    if usuario == usuario_correto and senha == senha_correta:
+        print("Boas-vindas! Login realizado com sucesso.")
+        break
+    else:
+        tentativas_restantes -= 1
+        if tentativas_restantes > 0:
+            print(f"Credenciais incorretas. Você tem {tentativas_restantes} tentativa(s) restante(s).")
+        else:
+            print("Todas as tentativas falharam. Acesso bloqueado.")
+            
+            for _ in range(3):
+                print("Acesso bloqueado")
